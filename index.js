@@ -7,6 +7,7 @@ import { PaperProvider } from 'react-native-paper';
 import App from './src/App';
 import {name as appName} from './app.json';
 
+
 export default props => {
     return(
         <PaperProvider>

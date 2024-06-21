@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { Card, Button } from 'react-native-paper';
+import { Card, Button, List, MD3Colors  } from 'react-native-paper';
+
+
+
 
 
 const MyComponennt = props => (
@@ -12,7 +15,21 @@ const MyComponennt = props => (
       <Text style={{color:'green', fontSize: 17}}>Doação realizada:</Text>
       <Text>Cama Box Casal Colchão Molas Qatar 138x188x60cm </Text>
     </Card.Content>
-  </Card>
+    </Card>
+
+
+    <List.Section style={{margin:10}}>
+    <List.Subheader style={{ fontWeight: 'bold', fontSize: 18, color: "#00003d", marginTop: 20 }}>Rastreio</List.Subheader>
+    <List.Item title="Doação confirmado" left={() => <List.Icon icon="check-circle" />} />
+    <List.Item left={() => <List.Icon icon="timeline-clock-outline" />} />
+    <List.Item title="Doação está a caminho"   left={() => <List.Icon icon="truck" />} />
+    <List.Item left={() => <List.Icon icon="timeline-clock-outline" />} />
+    <List.Item title="Doação realizada com sucesso" left={() => <List.Icon icon="map-marker" />} />
+  </List.Section>
+ 
+
+
+  
     </ScrollView>
 );
 

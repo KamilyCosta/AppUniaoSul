@@ -1,16 +1,15 @@
 import * as React from 'react';
 import { ScrollView, Text, View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 import { Card, Button } from 'react-native-paper';
 
+const Stack = createStackNavigator();
 
-
-const MyComponennt = props => (
-
-
-
+const MyComponennt = props => 
     <ScrollView>
+    
         <Card>
             <Card.Content>
                 <Text style={{ fontWeight: 'bold', fontSize: 25, color: "#00003d" }}>Cama Casal</Text>
@@ -22,20 +21,20 @@ const MyComponennt = props => (
 
                 <Text variant="bodyMedium" style={{ color: 'green', marginTop: 30 }}>10% de desconto</Text>
 
-                <Text style={{ fontWeight: 'bold', fontSize: 20}}>R$ 702,00</Text>
+                <Text style={{ fontWeight: 'bold', fontSize: 20 }}>R$ 702,00</Text>
                 <Button
-                style={{marginTop: 10, backgroundColor:'#448cf2'}}
-                mode="contained"
-                onPress={() => props.navigation.navigate('Pagamento')}>
-               Finalizar
+                    style={{ marginTop: 10, backgroundColor: '#448cf2' }}
+                    mode="contained"
+                    onPress={() => props.navigation.navigate('Pagamento')}>
+                    Finalizar
                 </Button>
                 <Button
-                style={{marginTop: 10, backgroundColor:'#9da0a5'}}
-                mode="contained"
-                onPress={() => props.navigation.navigate('Produtos')}>
-               Cancelar
+                    style={{ marginTop: 10, backgroundColor: '#9da0a5' }}
+                    mode="contained"
+                    onPress={() => props.navigation.navigate('Produtos')}>
+                    Cancelar
                 </Button>
-                
+
 
 
             </Card.Content>
@@ -51,23 +50,29 @@ const MyComponennt = props => (
                 <Text variant="bodyMedium">Doar água mineral é uma ação essencial para ajudar comunidades em situações de emergência!</Text>
 
                 <Text variant="bodyMedium" style={{ color: 'green', marginTop: 30 }}>10% de desconto</Text>
-                <Text style={{ fontWeight: 'bold', fontSize: 20}}>R$ 20,00</Text>
+                <Text style={{ fontWeight: 'bold', fontSize: 20 }}>R$ 20,00</Text>
                 <Button
-                style={{marginTop: 10,  backgroundColor:'#448cf2'}}
-                mode="contained"
-                onPress={() => props.navigation.navigate('Pagamento')}>
-                Finalizar
+                    style={{ marginTop: 10, backgroundColor: '#448cf2' }}
+                    mode="contained"
+                    onPress={() => MyStack.navigation.navigate('Pagamento')}>
+                    Finalizar
                 </Button>
                 <Button
-                style={{marginTop: 10, backgroundColor:'#9da0a5'}}
-                mode="contained"
-                onPress={() => props.navigation.navigate('Produtos')}>
-               Cancelar
+                    style={{ marginTop: 10, backgroundColor: '#9da0a5' }}
+                    mode="contained"
+                    onPress={() => props.navigation.navigate('Produtos')}>
+                    Cancelar
                 </Button>
             </Card.Content>
         </Card>
-    </ScrollView>
-);
 
-export default MyComponennt 
+
+        
+
+
+
+    </ScrollView>
+
+
+export default MyComponennt
 
